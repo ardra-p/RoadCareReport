@@ -81,7 +81,7 @@
 <p class="text-[#111318] dark:text-white text-3xl font-black leading-tight tracking-[-0.033em]">Admin Access</p>
 <p class="text-[#616f89] dark:text-gray-400 text-base font-normal">Please identify yourself to access the Road Care dashboard.</p>
 </div>
-<form class="flex flex-col gap-5">
+<form class="flex flex-col gap-5" method="get">
 <!-- Name Field -->
 <label class="flex flex-col w-full">
 <p class="text-[#111318] dark:text-gray-200 text-sm font-semibold leading-normal pb-2">Administrator Name</p>
@@ -126,12 +126,16 @@
 </button>
 </div>
 </label>
+
 <div class="pt-2">
-<button class="w-full flex cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-primary/90 text-white text-base font-bold leading-normal tracking-[0.015em] shadow-lg shadow-primary/20 transition-all active:scale-[0.98]">
+<a href="{% url 'admin_dashboard' %}">
+<button class="w-full flex cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-primary/90 text-white text-base font-bold leading-normal tracking-[0.015em] shadow-lg shadow-primary/20 transition-all active:scale-[0.98]" type="submit" >
 <span class="truncate">Access Dashboard</span>
 <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
 </button>
+</a>
 </div>
+
 </form>
 <div class="mt-8 flex items-center justify-center gap-2 text-xs text-[#616f89] dark:text-gray-500">
 <span class="material-symbols-outlined text-sm">encrypted</span>

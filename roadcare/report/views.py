@@ -5,5 +5,3 @@ from django.shortcuts import render
 def homepage(request):
     return render(request,'home/home.html')
 
-def admin_login(request):
-    return render(request,'home/admin_login.html')
