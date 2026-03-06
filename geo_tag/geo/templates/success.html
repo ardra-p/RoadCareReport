@@ -1,0 +1,16 @@
+<h2>Complaint Submitted Successfully ✅</h2>
+
+<p><strong>Title:</strong> {{ complaint.title }}</p>
+<p><strong>Description:</strong> {{ complaint.description }}</p>
+<p><strong>Latitude:</strong> {{ complaint.latitude }}</p>
+<p><strong>Longitude:</strong> {{ complaint.longitude }}</p>
+<p><strong>Address:</strong> {{ complaint.address }}</p>
+
+{% if complaint.photo %}
+    <img src="{{ complaint.photo.url }}" width="400">
+{% else %}
+    <p>No photo captured.</p>
+{% endif %}
+
+<br><br>
+<a href="/">Add Another Complaint</a>
